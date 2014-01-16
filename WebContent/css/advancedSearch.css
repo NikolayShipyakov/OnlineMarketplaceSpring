@@ -1,0 +1,65 @@
+body {
+	margin: 0 px;
+}
+
+.size {
+	margin-top: 50px;
+	width: 450px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #87CEFA;
+	border: solid;
+	border-color: #146EB4;
+}
+
+.size div {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2px;
+	width: 400px;
+}
+
+label.name_fields {
+	width: 90px;
+	float: left;
+	color: black;
+	font-weight: bold;
+}
+
+label.max_price {
+	margin-left: 20px;
+	width: 90px;
+	color: black;
+	font-weight: bold;
+}
+
+label.warning_red_text {
+	color: gray;
+}
+
+input.text {
+	width: 280px;
+}
+
+input.text_min {
+	width: 90px;
+}
+
+div.buttons {
+	width: 270px;
+}
+
+input.reset {
+	margin-left: 20px;
+}
+
+div.warningmessage {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5px;
+	width: 350px;
+}
+
+div.warningmessage label,span {
+	color: red;
+}

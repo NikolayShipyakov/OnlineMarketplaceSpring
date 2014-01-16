@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>Show items</title>
+<link rel="stylesheet" type="text/css" href="../../css/showItems.css" />
+<script type="text/javascript" src="../../js/model.js"></script>
+<script type="text/javascript" src="../../js/showItems.js"></script>
+<script type="text/javascript" src="../../js/sort.js"></script>
+<script type="text/javascript" src="../../js/user.js"></script>
+<script type="text/javascript" src="../../js/testData.js"></script>
+<script type="text/javascript" src="../../js/constants.js"></script>
+</head>
+<body onload="onLoad()">
+
+	<div class="welcom">
+		<div>
+			<label class="welcom">You are logged in as : </label><label id="user"
+				class="user">Guest</label><a id="log" href="login.html" onclick="logout()">logout</a>
+		</div>
+	</div>
+
+	<div class="head">
+		<label>Online marketplace</label>
+	</div>
+	<div class="search">
+		<label class="parameters">Search parameters</label> <br /> <label class="keyword">Keyword:</label>
+	</div>
+	<div class="buttonssearch">
+		<input id="keyword" type="text" name="keyword" class="textsearch" />
+		<select id="typeSearch" class="typesearch" name="typeSearch">
+			<option>Title</option>
+			<option>Description</option>
+		</select> <input type="button" value="Search" onclick="search();" />
+	</div>
+
+	<div class="links">
+		<a href="#" onclick="showAllItems()">Show All Items</a> <a id="myitems" href="showMyItems.html">Show My
+			Items</a> <a id="sell" href="editItem.html">Sell</a>
+	</div>
+	<div class="table">
+		<div class="aftertable">
+			<label>Items</label>
+		</div>
+		<table>
+			<tbody id="items">
+				<tr class="head">
+					<th class="uid">UID</th>
+					<th onclick="sortTitle();">Title<img id="imgTitle"
+						src="../imgs/updown.png" alt="sort"/> <input id="titleSort" type="hidden"
+						value="updown" /></th>
+					<th>Description</th>
+					<th class="seller">Seller</th>
+					<th class="price">Start Price</th>
+					<th class="increment">Bid inc</th>
+					<th class="bestoffer" onclick="sortBestOffer();">Best offer<img
+						id="imgOffer" src="../imgs/updown.png" alt="sort"/><input id="offerSort"
+						type="hidden" value="updown" /></th>
+					<th class="bidder">Bidder</th>
+					<th class="date">Stop date</th>
+					<th class="bidding">Bidding</th>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+</body>
+</html>

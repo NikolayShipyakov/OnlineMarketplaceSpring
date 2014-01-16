@@ -1,0 +1,12 @@
+{{#people}}
+<tr>
+<td>{{id}}</td>
+<td>{{firstName}}</td>
+<td>{{lastName}}</td>
+<td>{{email}}</td>
+<td>
+	<img src="delete.png" width = "32" onclick="deleteMust({{index}})" />
+	<img src="edit.png"   width = "32" onclick="editMust({{index}})" />
+</td>
+</tr>
+{{/people}}

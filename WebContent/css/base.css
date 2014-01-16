@@ -1,0 +1,15 @@
+body {
+	margin: 0px;
+	width: 100%;
+}
+
+div.head {
+	margin-top: 20px;
+}
+
+div.head label {
+	margin-left: 20px;
+	font-size: 20px;
+	color: #146EB4;
+	font-family: serif;
+}

@@ -1,0 +1,138 @@
+body {
+	margin: 0px;
+	width: 100%;
+}
+
+div.table {
+	margin-top: 30px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+div.aftertable {
+	background-color: #146EB4;
+}
+
+div.table label {
+	color: white;
+}
+
+div.table table {
+	border: solid;
+	border-style: solid;
+	border-color: gray;
+	background-color: gray;
+	width: 100%;
+}
+
+div.table tr.head {
+	background-color: silver;
+	height: auto;
+}
+
+div.table tr.head:hover {
+	cursor: pointer;
+}
+
+div.table img {
+	width: 10px;
+	height: 10px;
+	margin-left: 10px;
+}
+
+tr {
+	background-color: #87CEFA;
+	height: auto;
+}
+
+.uid {
+	width: 25px;
+	text-align: right;
+}
+
+.seller {
+	width: 100px;
+}
+
+.price {
+	width: 80px;
+	text-align: right;
+}
+
+.increment {
+	width: 50px;
+	text-align: right;
+}
+
+.bestoffer {
+	width: 90px;
+	text-align: right;
+}
+
+.bidder {
+	width: 100px;
+}
+
+.date {
+	width: 80px;
+}
+
+.action {
+	width: 150px;
+}
+
+.buybutton {
+	margin-left: 25px;
+	width: 100px;
+}
+
+.biddiv {
+	background-color: white;
+}
+
+div.table table input[type="text"] {
+	margin-left: 10px;
+	width: 55px;
+}
+
+.bidbutton {
+	margin-left: 20px;
+	width: 55px;
+}
+
+a.prevpage {
+	color: black;
+	font: bold;
+	margin-left: 10px;
+}
+
+a.nextpage {
+	color: black;
+	font: bold;
+	float: right;
+}
+
+a.firstpage {
+	color: black;
+	font: bold;
+}
+
+a.lastpage {
+	margin-left: 10px;
+	color: black;
+	font: bold;
+	float: right;
+}
+
+a.links {
+	color: black;
+}
+
+.
+text {
+	text-align: center;
+}
+
+.deleteedit {
+	width: 150px;
+}

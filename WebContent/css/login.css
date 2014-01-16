@@ -1,0 +1,65 @@
+body {
+	margin: 0px
+}
+
+.head {
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.head label {
+	color: #146EB4;
+	font-family: serif;
+	font-size: 20px;
+	margin-left: 30px;
+}
+
+.size {
+	margin-top: 300px;
+}
+
+.size div {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2px;
+	width: 300px;
+}
+
+div.inputfields {
+	width: 310px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #87CEFA;
+	border: solid;
+	border-color: #146EB4;
+}
+
+.size input {
+	width: 120px;
+}
+
+label.log_pass {
+	width: 70px;
+	float: left;
+	color: black;
+}
+
+a.register {
+	margin-left: 199px;
+	color: #146EB4
+}
+
+.errorhidden {
+	visibility: hidden;
+}
+
+.error {
+	color: red;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+a {
+	color: #146EB4
+}

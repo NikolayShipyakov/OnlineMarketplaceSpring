@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Login</title>
+<link rel="stylesheet" type="text/css" href="css/login.css" />
+<script type="text/javascript" src="js_libs/jquery-2.0.3.js"></script>
+<script type="text/javascript" src="js/constants.js"></script>
+<script type="text/javascript" src="js/user.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
+<script type="text/javascript" src="js/utils.js"></script>
+</head>
+<body>
+	<div>
+		<div class="head">
+			<label>Online marketplace</label>
+		</div>
+		<form id="loginForm" method="get" action="showItems">
+			<div id="registration" class="size">
+
+				<div>
+					<label class="log_pass">Login</label> <input id="login"
+						name="login" type="text" /> <a id="sign" style="color: #146EB4"
+						href="#" onclick="sign()">Sign in</a>
+				</div>
+				<div>
+					<label class="log_pass">Password</label> <input id="password"
+						name="password" type="password" /> <a style="color: #146EB4"
+						href="showItems.html">Enter as guest</a>
+				</div>
+				<div>
+					<a class="register" href="registration.html">Register</a>
+				</div>
+				<div>
+					<label id="warning" class="errorhidden">Authorization
+						error. The length Login or Password doesn't correspond to the
+						minimum.</label> <label id="details" class="error"></label>
+				</div>
+			</div>
+		</form>
+	</div>
+</body>
+</html>
+
