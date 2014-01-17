@@ -1,7 +1,10 @@
 package com.epam.marketplace.dao;
 
 import com.epam.marketplace.dao.oracledao.OracleDAOFactory;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
+import javax.annotation.Resource;
 import javax.sql.DataSource;
 
 /**
@@ -10,6 +13,7 @@ import javax.sql.DataSource;
  * @author Nikolay_Shipyakov
  * 
  */
+@Configuration
 public abstract class DAOFactory {
 	protected static DataSource source;
 
@@ -34,6 +38,7 @@ public abstract class DAOFactory {
 	 * 
 	 * @return GoodsDAO
 	 */
+    @Bean(name = "goodsDAO")
 	public abstract GoodsDAO getGoodsDAO();
 
 	/**

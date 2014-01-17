@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+	<definition name="basetemplate" template="/WEB-INF/jsp/basetemplate.jsp">
+		<put-attribute name="title" value="Online_Marketplace" />
+		<put-attribute name="head" value="/WEB-INF/jsp/tiles/head.jsp" />
+		<put-attribute name="caption" value="Online_Marketplace." />
+		<put-attribute name="search" value="" />
+		<put-attribute name="navigationMenu" value="/WEB-INF/jsp/tiles/navigationMenu.jsp" />
+		<put-attribute name="content" value="content" />
+	</definition>
+
+	<definition name="showItems" extends="basetemplate">
+		<put-attribute name="title" value="Online_Marketplace. Show items." />
+		<put-attribute name="caption" value="Online_Marketplace. Show items." />
+		<put-attribute name="search" value="/WEB-INF/jsp/tiles/search.jsp" />
+		<put-attribute name="content" value="/WEB-INF/jsp/tiles/itemstable.jsp" />
+	</definition>
+
+	<definition name="showMyItems" extends="basetemplate">
+		<put-attribute name="title" value="Online_Marketplace. Show my items." />
+		<put-attribute name="caption" value="Online_Marketplace. Show my items." />
+		<put-attribute name="content" value="/WEB-INF/jsp/tiles/myitems.jsp" />
+	</definition>
+	
+	<definition name="users" extends="basetemplate">
+		<put-attribute name="title" value="Online_Marketplace. Show users." />
+		<put-attribute name="caption" value="Online_Marketplace. Show users." />
+		<put-attribute name="content" value="/WEB-INF/jsp/tiles/listuser.jsp" />
+	</definition>
+	
+	<definition name="history" extends="basetemplate">
+		<put-attribute name="title" value="Online_Marketplace. Info item." />
+		<put-attribute name="caption" value="Online_Marketplace. Info item." />
+		<put-attribute name="content" value="/WEB-INF/jsp/tiles/infoitem.jsp" />
+	</definition>
+	
+	<definition name="insertItem" extends="basetemplate">
+		<put-attribute name="title" value="Online_Marketplace. Insert item." />
+		<put-attribute name="caption" value="Online_Marketplace. Insert item." />
+		<put-attribute name="content" value="/WEB-INF/jsp/tiles/insertitem.jsp" />
+	</definition>
+	
+	<definition name="advancedSearch" extends="basetemplate">
+		<put-attribute name="title" value="Online_Marketplace. Advanced search." />
+		<put-attribute name="caption" value="Online_Marketplace. Advanced search." />
+		<put-attribute name="content" value="/WEB-INF/jsp/tiles/advancedsearch.jsp" />
+	</definition>
+	
+	<definition name="editItem" extends="basetemplate">
+		<put-attribute name="title" value="Online_Marketplace. Edit item." />
+		<put-attribute name="caption" value="Online_Marketplace. Edit item." />
+		<put-attribute name="content" value="/WEB-INF/jsp/tiles/edititem.jsp" />
+	</definition>
+</tiles-definitions>

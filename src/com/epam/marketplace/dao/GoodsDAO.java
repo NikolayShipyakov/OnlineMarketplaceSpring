@@ -3,6 +3,7 @@ package com.epam.marketplace.dao;
 import com.epam.marketplace.beans.Goods;
 import com.epam.marketplace.beans.GoodsForForm;
 import com.epam.marketplace.beans.GoodsTransfer;
+import com.epam.marketplace.beans.SearchParameters;
 
 import java.util.ArrayList;
 
@@ -78,8 +79,7 @@ public interface GoodsDAO {
 	 * @param fieldSort field sort
 	 * @return list with goods
 	 */
-	ArrayList<Goods> selectAllItemsOnInterval(int beginInterval,
-                                              int endInterval, int typeSort, String fieldSort);
+	ArrayList<Goods> selectAllItemsOnInterval(SearchParameters searchParameters);
 
 	/**
 	 * Select items on interval on best offer
@@ -118,6 +118,8 @@ public interface GoodsDAO {
 	 */
 	ArrayList<Goods> searchItems(int beginInterval, int endInterval,
                                  int typeSort, String parameter, String typeSearch, String nameSort);
+
+    ArrayList<Goods> searchItems(SearchParameters parameters);
 
 	/**
 	 * Select all my items

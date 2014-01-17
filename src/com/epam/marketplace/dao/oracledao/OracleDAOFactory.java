@@ -1,6 +1,8 @@
 package com.epam.marketplace.dao.oracledao;
 
 import com.epam.marketplace.dao.*;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
@@ -12,11 +14,13 @@ import java.sql.SQLException;
  * @author Nikolay_Shipyakov
  * 
  */
+@Configuration
 public class OracleDAOFactory extends DAOFactory {
 
 	/**
 	 * {@inheritDoc}
 	 */
+    @Bean(name = "categoryDAO")
 	public CategoryDAO getCategoryDAO() {
 		return new OracleCategoryDAO(source);
 	}
@@ -53,6 +57,7 @@ public class OracleDAOFactory extends DAOFactory {
 	/**
 	 * {@inheritDoc}
 	 */
+    @Bean(name = "goodsDAO")
 	public GoodsDAO getGoodsDAO() {
 		return new OracleGoodsDAO(source);
 	}

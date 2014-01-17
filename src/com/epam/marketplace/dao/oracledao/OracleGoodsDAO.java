@@ -3,7 +3,9 @@ package com.epam.marketplace.dao.oracledao;
 import com.epam.marketplace.beans.Goods;
 import com.epam.marketplace.beans.GoodsForForm;
 import com.epam.marketplace.beans.GoodsTransfer;
+import com.epam.marketplace.beans.SearchParameters;
 import com.epam.marketplace.dao.GoodsDAO;
+import com.epam.marketplace.utils.Constants;
 
 import javax.sql.DataSource;
 import java.sql.*;
@@ -91,6 +93,13 @@ public class OracleGoodsDAO implements GoodsDAO {
 					+ "Category_Name, Category_Id FROM (SELECT * "
 					+ "FROM goods_with_max_bid %s Order By %s %s)) "
 					+ "WHERE (\"n\" BETWEEN %d AND %d)";
+    private static final String EXTENDED_SEARCH_ITENS =
+            "Select * FROM (Select Rownum as \"n\", Item_Id, Title, Description, "
+            + "Seller_Id, Seller, Seller_Login,Start_Price, Bid_Increment,"
+            + "Bid, Start_Bidding_Date, Time_Left,Buy_It_Now, Bidder, "
+            + "Category_Name, Category_Id FROM (SELECT * "
+            + "FROM goods_with_max_bid %s Order By %s %s)) "
+            + "WHERE (\"n\" BETWEEN %d AND %d)";
 	private static String SELECT_ITEM_INFO =
 			"Select Title, Description, "
 					+ "Seller, Start_Price, Bidder,Bid FROM goods "
@@ -415,20 +424,21 @@ public class OracleGoodsDAO implements GoodsDAO {
 	/**
 	 * {@inheritDoc}
 	 */
-	public ArrayList<Goods> selectAllItemsOnInterval(int beginInterval,
-			int endInterval, int typeSort, String fieldSort) {
+	public ArrayList<Goods> selectAllItemsOnInterval(SearchParameters parameters) {
 		String direction;
-		if (typeSort == 0) {
+		if (parameters.getTypeSort() == 0) {
 			direction = TYPE_SORT_ASC;
 		} else {
 			direction = TYPE_SORT_DESC;
 		}
 		String typeS;
-		if (TYPE_SORT_TITLE.equals(fieldSort)) {
+		if (TYPE_SORT_TITLE.equals(parameters.getTypeSort())) {
 			typeS = TYPE_SORT_TITLE;
 		} else {
 			typeS = TYPE_SORT_BEST_OFFER;
 		}
+        int beginInterval = (parameters.getPage() - 1) * Constants.COUUNT_ITEMS_ON_PAGE;
+        int  endInterval = parameters.getPage() * Constants.COUUNT_ITEMS_ON_PAGE;
 		String query = String.format(SELECT_ITEMS_ON_INTERVAL_ON_PARAMETERS, typeS,
 					direction, beginInterval, endInterval);
 		ArrayList<Goods> listGoodsTransfer = new ArrayList<Goods>();
@@ -1125,4 +1135,9 @@ public class OracleGoodsDAO implements GoodsDAO {
 		}
 		return goods;
 	}
+
+    @Override
+    public ArrayList<Goods> searchItems(SearchParameters parameters) {
+        return null;  //To change body of implemented methods use File | Settings | File Templates.
+    }
 }

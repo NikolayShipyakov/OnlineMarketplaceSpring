@@ -6,7 +6,8 @@ var sign = function(){
     if(errors.length == 0){
         auth(userInfo);
         //User.setUserLogin(userInfo.login);
-        submit();
+        window.location = "/showItems.spring";
+        //submit();
     } else {
         showErrorAuth(errors);
     }
